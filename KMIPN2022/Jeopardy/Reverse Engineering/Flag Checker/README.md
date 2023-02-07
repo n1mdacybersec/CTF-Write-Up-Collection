@@ -10,11 +10,11 @@ strings FlagChecker.exe
 ```
 Tidak ada hasil yang begitu bisa digali informasinya
 
-Langkah berikutnya adalah mencoba perintah objdump untuk menampilkan semua konten dari file executable beserta dan isinya pada masing-masing memory.
+Langkah berikutnya adalah mencoba perintah objdump untuk menampilkan semua konten dari file executable beserta isinya pada masing-masing memory.
 ``` shell
 $ objdump -s FlagChecker.exe
 -- output truncated --
-402fe0 65787400 7365745f 54657874 00666c61  ext.set_Text.fla
+ 402fe0 65787400 7365745f 54657874 00666c61  ext.set_Text.fla
  402ff0 67546578 74005368 6f770073 65745f54  gText.Show.set_T
  403000 6162496e 64657800 4d657373 61676542  abIndex.MessageB
  403010 6f780054 65787442 6f780067 65745f41  ox.TextBox.get_A
