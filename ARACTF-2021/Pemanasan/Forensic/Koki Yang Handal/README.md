@@ -31,7 +31,7 @@ Megapixels                      : 0.657
 ```
 Terdapat comment section yang menunjukkan bagian terakhir flag, yaitu `Keju: 0xzQl9CaVRTfQ==`
 
-Langkah berikutnya adalah mencari bagian flag yang lain, dengan cara mencari file yang disembunyikan pada file png tersebut. Untuk itu digunakan tool stegosuite. Stegosuite meminta sebuah secret yang digunakan untuk mengekstrak file tersebut. Secret yang dimaksud bisa saja berasal dari 3 bagian/bahan dari, dimana secret yang dimaksud adalah `Daging`.
+Langkah berikutnya adalah mencari bagian flag yang lain, dengan cara mencari file yang disembunyikan pada file png tersebut. Untuk itu digunakan tool stegosuite. Stegosuite meminta sebuah secret yang digunakan untuk mengekstrak file tersebut. Secret yang dimaksud bisa saja berasal dari 3 bagian/bahan dari flag, dimana secret yang dimaksud adalah `Daging`.
 ![Searching for embedded file using stegosuite](./stegosuite.png)
 
 Hasilnya didapatkan sebuah file flag.
