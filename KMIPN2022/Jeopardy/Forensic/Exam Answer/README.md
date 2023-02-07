@@ -8,7 +8,9 @@ Diberikan sebuah file gambar [berikut](./Challenge/logo_polibatam.png) yang meru
 ``` shell
 strings logo_polibatam.png
 ```
-Pada hasil pengecekan string dari gambar ada informasi yang bisa didapat, yaitu adanya teks setelah chunk IEND. Menurut informasi dari [Wikipedia](https://en.wikipedia.org/wiki/Portable_Network_Graphics) chunk IEND adalah bagian terakhir dari gambar png.
+Pada hasil pengecekan string dari gambar ada informasi yang bisa didapat, yaitu adanya teks setelah chunk IEND.
+![Strings for given image](./IEND_chunk.png)
+Menurut informasi dari [Wikipedia](https://en.wikipedia.org/wiki/Portable_Network_Graphics) chunk IEND adalah bagian terakhir dari gambar png.
 
 Jika terdapat teks yang disisipkan setelah chunk IEND kemungkinan itu adalah flag yang dicari. Teks setelah chunk tersebut seperti telah di-encode menggunakan base64.
 **WFpWQ0E5e0NieXZncnhhdnhPbmduenF2cXZldnhuYWNucW5nbmF0dG55ODVacnY3NTU1fQ==**
