@@ -1,4 +1,4 @@
-# CTF-Write-Up-Collection
+# CTF Write Up Collection
 
 ## Koleksi Write-Up CTF
 Repository ini berisi kumpulan write-up dari berbagai challenge yang pernah N1MDA Cyber Security Team ikuti dalam CTF (Capture The Flag).
