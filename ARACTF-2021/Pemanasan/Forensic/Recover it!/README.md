@@ -38,7 +38,7 @@ $ xxd fin.gif
 00000010: 0303 03f2 f2f2 d3d3 d3ea eaea 7b7b 7ba3  ............{{{.
 -- output truncated --
 ```
-Pada byte 0 hingga 5 yaitu 39 61 F4 01 terdapat kerusakan yang menyebabkan file gif tidak dikenali. Pada [Wikipedia](https://en.wikipedia.org/wiki/GIF) dan link [berikut](https://www.file-recovery.com/gif-signature-format.htm) dijelaskan nilai apa saja yang harus sesuai untuk byte penting agar gif bisa dikenali.
+Pada byte 0 hingga 3 yaitu 39 61 F4 01 terdapat kerusakan yang menyebabkan file gif tidak dikenali. Pada [Wikipedia](https://en.wikipedia.org/wiki/GIF) dan link [berikut](https://www.file-recovery.com/gif-signature-format.htm) dijelaskan nilai apa saja yang harus sesuai untuk byte penting agar gif bisa dikenali.
 
 Karena kerusakan sudah cukup jelas, tinggal diedit menggunakan vim atau xxd sehingga nilai byte 0 hingga 5 seperti berikut ini.
 ![Recovered GIF format](./recovered_gif.png)
