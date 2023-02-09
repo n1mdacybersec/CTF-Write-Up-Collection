@@ -4,7 +4,7 @@
 PT Pama Persada sedang melakukan pengeboran untuk mendapatkan mineral di lokasi penemuan mineral terbaru mereka. Seorang engineer nya lalu berkata: We need to go deeper...
 
 ## Solusi
-Diketahui suatu file dengan ekstensi zip bernama 0.zip. Ketika melakukan ekstrak pada file zip tersebut terdapat file zip lagi (nested zip) dengan nama file angka 1 dan seterusnya. Dari sini dapat digunakan perintah ```strings 0.zip | grep ara2021``` untuk mengecek strings apa saja yang terdapat di file tersebut. Ternyata didapatkan hasil seperti berikut 
+Diketahui suatu file dengan ekstensi zip bernama 0.zip. Ketika melakukan ekstrak pada file zip tersebut terdapat file zip lagi (nested zip) dengan nama file angka 1 dan seterusnya. Dari sini dapat digunakan perintah ```strings 0.zip | grep ara2021``` untuk mengecek strings apa saja yang terdapat di file tersebut. Ternyata didapatkan hasil seperti berikut.
 
 ![Hasil grep](./grep.png)
 
