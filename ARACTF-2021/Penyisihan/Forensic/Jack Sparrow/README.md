@@ -9,7 +9,7 @@ Diberikan sebuah file gambar dan untuk menemukan flag dari tantangan ini diperlu
 ![Hex value from color](./jack_sparrow_1.png)
 
 Setelah diketahui seluruh nilainya, kita bisa membuat program Python sederhana untuk mengubah hex menjadi ASCII
-```
+``` python
 string = "617261323032317b337a5f507a5f6c7a5f6c336d306e5f53515a7d"
 decoded = bytes.fromhex(string)
 decoded = decoded.decode("ascii")
