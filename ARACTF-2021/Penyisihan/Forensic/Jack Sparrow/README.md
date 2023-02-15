@@ -5,6 +5,7 @@ Not all treasure is silver and gold mate! let the ship flow from left to right
 
 ## Solusi
 Diberikan sebuah file gambar dan untuk menemukan flag dari tantangan ini diperlukan tool atau aplikasi color picker yang bisa memberikan nilai hex dari warna tersebut.
+
 ![Hex value from color](./jack_sparrow_1.png)
 
 Setelah diketahui seluruh nilainya, kita bisa membuat program Python sederhana untuk mengubah hex menjadi ASCII
