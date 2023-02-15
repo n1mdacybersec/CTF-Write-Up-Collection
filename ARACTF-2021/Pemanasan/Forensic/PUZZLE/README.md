@@ -17,7 +17,7 @@ Langkah selanjutnya adalah untuk menyimpan stream nomor 1 sampai 5 ke dalam form
 ![Saved stream as raw data](./puzzle_3.png)
 
 Karena file sudah didapatkan, kita dapat menggunakan program Python berikut untuk menyusun kembali file-file tersebut dan menyimpannya menjadi file PNG
-```
+```python
 content =""
 data = ["1.raw", "2.raw", "3.raw", "4.raw", "5.raw"] 
 for file in data: 
