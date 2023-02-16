@@ -100,7 +100,6 @@ Solusi dari permasalahan tersebut sebenarnya cukup sederhana, yaitu dengan:
 Dari logika di atas dapat dibuat sebuah program Python berikut
 ``` python
 import hashlib
-import base64
 
 '''
 how key generated
