@@ -16,7 +16,7 @@ e: 65537
 ```
 Pada algoritma RSA nilai `c` adalah teks yang telah di enkripsi, nilai `n` adalah perkalian antara dua bilangan prima, yaitu `n = p*q`. 
 Nilai `e` adalah bilangan yang lebih besar dari 1 dan lebih kecil dari `phi` dan bilangan tersebut koprima dengan `phi`.
-Nilai `d` digunakan sebagai private key dan didapatkan dari perkalian invers `e` dengan `mod(phi)`. Variable `m` adalah pesan yang telah didekripsi, dengan persamaan `c^d mod n
+Nilai `d` digunakan sebagai private key dan didapatkan dari perkalian invers `e` dengan `mod(phi)`. Variable `m` adalah pesan yang telah didekripsi, dengan persamaan `c^d mod n`
 
 Untuk lebih jelasnya ada pada operasi berikut
 ```
@@ -55,7 +55,7 @@ print(long_to_bytes(m))
 ```
 
 ## Flag
-picoCTF{sma11_N_n0_g0od_23540368}
+### picoCTF{sma11_N_n0_g0od_23540368}
 
 
 
