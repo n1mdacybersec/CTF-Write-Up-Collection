@@ -3,6 +3,10 @@
 ## Deskripsi
 Files can always be changed in a secret way. Can you find the flag? [cat.jpg](https://mercury.picoctf.net/static/7cf6a33f90deeeac5c73407a1bdc99b6/cat.jpg)
 
+## Hint
+- Look at the details of the file
+- Make sure to submit the flag as picoCTF{XXXXX}
+
 ## Solusi
 File yang diberikan merupakan file JPG. Sama seperti langkah umum dalam memecahkan soal forensic yaitu dengan menggunakan exiftool
 ``` shell
