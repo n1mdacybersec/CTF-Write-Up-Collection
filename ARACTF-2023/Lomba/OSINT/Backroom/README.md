@@ -8,7 +8,7 @@ I found a place that give me a backroom vibes. I think I like this place, so I g
 
 ## Solusi
 Diberikan sebuah file gambar. Jika digunakan perintah exiftool terdapat koordinat latitude longitude yang bisa dicari menggunakan Google maps.
-``` shell
+```
 $ exiftool IMG20221221153220.jpg
 -- output truncated --
 Create Date                     : 2022:12:21 15:32:20.831
