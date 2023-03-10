@@ -18,7 +18,7 @@ ZIZ2023{4mby0wb_gs0f9sg_gs4g_!g5_4_s4hs?}
 
 Terdapat teks yang masih belum sesuai dengan format flag. Pada awalnya chiper yang digunakan adalah Caesar cipher, ternyata cipher yang digunakan adalah Affine cipher. Digunakan [dCode](https://www.dcode.fr/affine-cipher) untuk mendapatkan flag.
 
-![Decoding result](./result.png)
+![Decoding result](./flag.png)
 
 ## Flag
 ### ARA2023{4nyb0dy_th0u9ht_th4t_!t5_4_h4sh?}
