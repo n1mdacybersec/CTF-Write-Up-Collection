@@ -15,7 +15,7 @@ Experiment with different shell syntax
 
 ## Solusi
 Shell yang diberikan secara otomatis membuat semua command yang dimasukkan menjadi diawali dengan huruf kapital dan secara otomatis melakukan auto-correction pada command tersebut.
-Dicoba untuk melakukan bypass terhadap restriction yang ada pada file tersebut dengan menggunakan panduan dari link [berikut](https://book.hacktricks.xyz/linux-hardening/bypass-bash-restrictions).
+Dicoba untuk melakukan bypass terhadap restriction yang ada pada shell tersebut dengan menggunakan panduan dari link [berikut](https://book.hacktricks.xyz/linux-hardening/bypass-bash-restrictions).
 
 ![Run command uname -a with backlashes](./1-Special.png)
 
