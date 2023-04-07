@@ -1,6 +1,6 @@
 # chrono
 
-## Description
+## Deskripsi
 How to automate tasks to run at intervals on linux servers?
 
 ## Points
