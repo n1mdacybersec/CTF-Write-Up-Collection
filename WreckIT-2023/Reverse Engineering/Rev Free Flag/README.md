@@ -4,7 +4,7 @@
 anggep aja flag gratis bang. kasian banyak yang blom pernah nyentuh ctfd keknya.
 
 ## Solusi
-Diberikan file [Challenge](challenge/chall.c) yang di dalamnya terdapat array. Dapat dilihat bahwa setiap elemen pada array `c` dilakukan proses XOR, yaitu jika indeks karakter adalah bilangan ganjil dan hasil XOR antara nilai integer dengan nilai 24/32 tidak sama dengan nilai ASCII dari karakter pada setiap indeks. 
+Diberikan file [Challenge](challenge/chall.c) yang di dalamnya terdapat array. Dilakukan perulangan untuk mengecek apakah indeks karakter di dalam array c tersebut ganjil atau genap. Jika indeksnya ganjil maka karakter di XOR dengan 24 dan jika indeksnya genap maka di XOR dengan 32
 
 Karena kita sudah mempunyai setiap karakter di dalam array `c`, maka kita dapat membalikkan prosesnya. Kami membuat script python [Solve](solve.py) seperti berikut:
 ```python
