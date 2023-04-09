@@ -2,7 +2,7 @@
 
 ## Deskripsi
 Can you make a CoreWars warrior that always loses, no ties?
-Your opponent is the Imp. The source is available here. If you wanted to pit the Imp against himself, you could download the Imp and connect to the CoreWars server like this:
+Your opponent is the Imp. The source is available [here](https://artifacts.picoctf.net/c/308/imp.red). If you wanted to pit the Imp against himself, you could download the Imp and connect to the CoreWars server like this:
 `nc saturn.picoctf.net 56070 < imp.red`
 
 ## Hint
