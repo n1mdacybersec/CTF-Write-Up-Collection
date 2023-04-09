@@ -8,7 +8,7 @@ Look at this image [here](https://artifacts.picoctf.net/c/236/atbash.jpg).
 1. Download the image and try to extract it.
 
 ## Solusi
-Diberikan suatu gambar [Challenge](Challenge/atbash.jpg). Menurut hint yang diberi, bahwa kami harus melakukan extract pada gambar tersebut. Digunakanlah `binwalk`, tetapi hasilnya nihil. Lalu kami berpikir bahwa bisa jadi merupakan `steganography`, maka kita menggunakan `steghide` sebagai berikut untuk ekstrak gambar tersebut.
+Diberikan suatu gambar [Challenge](Challenge/atbash.jpg). Menurut hint yang diberi, bahwa kami harus melakukan extract pada gambar tersebut. Digunakanlah `binwalk`, tetapi hasilnya nihil. Lalu kami berpikir bahwa bisa jadi merupakan `steganography`, maka kita menggunakan `steghide` sebagai tools, berikut command untuk ekstrak gambar tersebut. Tidak perlu untuk menginputkan `passphrase`
 
 ```shell
 $steghide extract -sf atbash.jpg 
