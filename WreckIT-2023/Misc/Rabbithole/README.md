@@ -43,3 +43,6 @@ Hasil akhirnya adalah file `1.zip` yang di dalamnya terdapat file `flag.txt`. Ji
 Digunakan [CyberChef](https://gchq.github.io/CyberChef/) untuk decode pesan dan didapatkan flag yang dicari.
 
 ![Flag](./flag.png)
+
+## Flag
+### WRECKIT40{!_H0p3_u_d1dn'7_d0_i7_m4Nu411y_40D}
