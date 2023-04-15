@@ -91,7 +91,7 @@ Penyelesaiannya adalah dengan membuat request `HTTP GET` dengan nilainya adalah 
 Port `8080` adalah port dari web tersebut jika kita menjalankannya pada local.
 Contohnya seperti berikut ini.
 
-![Request using X-Forwarded-For:127.0.0.1 header](./flag.jpeg)
+![Request using X-Forwarded-For:127.0.0.1 header](./flag.png)
 
 ## Flag
 ### LINECTF{6a22ff56112a69f9ba1bfb4e20da5587}
