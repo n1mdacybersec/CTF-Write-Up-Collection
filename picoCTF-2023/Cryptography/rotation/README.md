@@ -23,9 +23,10 @@ Format flag dari picoCTF adalah `picoCTF{some_flag}` dan dari huruf pertama file
 Sehingga rotation cipher yang diperlukan untuk mendapatkan flag adalah seperti berikut ini.
 
 ```mermaid
-graph TD;
-  x-->shifted to the right by 18;
-  shifted to the right by 18-->y;
+flowchart LR
+
+A[x] -->B[Shifted to the right by 18]
+B --> C[p]
 ```
 
 Untuk mendapatkan flag menggunakan [rot13.com](https://rot13.com/) dengan mengubah default rotation yang awalnya 13 menjadi 18.
