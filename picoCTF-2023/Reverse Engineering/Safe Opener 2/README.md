@@ -26,7 +26,7 @@ public static boolean openSafe(String password) {
 ```
 
 Berikut merupakan screenshot dari keseluruhan source codenya.
-[Result](result.png)
+![Result](result.png)
 
 ## Flag
 ### picoCTF{SAf3_0p3n3rr_y0u_solv3d_it_de45efd6}
