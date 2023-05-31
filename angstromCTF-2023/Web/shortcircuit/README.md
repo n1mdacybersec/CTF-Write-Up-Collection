@@ -75,10 +75,10 @@ Proses pertukaran isi dari chunk tersebut seperti berikut ini.
 ```mermaid
 flowchart LR
 
-A[chunk [0, 1, 2, 3]] -->B[chunk [3, 1, 2, 0]]
-B --> C[chunk [3, 2, 1, 0]]
-C --> D[chunk [3, 0, 1, 2]]
-D --> E[chunk [3, 0, 2, 1]]
+A[chunk 0123] -->B[chunk 3120];
+B --> C[chunk 3210];
+C --> D[chunk 3012];
+D --> E[chunk 3021];
 ```
 
 Untuk mengembalikan flag menjadi urutannya seperti semula dapat menggunakan program JavaScript berikut ini.
