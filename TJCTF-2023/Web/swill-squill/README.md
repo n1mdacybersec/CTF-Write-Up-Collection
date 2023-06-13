@@ -5,6 +5,9 @@ ezsql
 
 [Instancer](https://instancer.tjctf.org/challenge/swill-squill)
 
+## Attachment
+[server.zip](./Challenge/server.zip)
+
 ## Solusi
 Source code yang diberikan dari challenge ini seperti di bawah ini.
 
