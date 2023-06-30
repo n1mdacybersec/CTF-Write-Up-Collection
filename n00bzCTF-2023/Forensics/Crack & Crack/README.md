@@ -11,7 +11,7 @@ Pada challenge ini terdapat sebuah file zip yang terkunci. Kita gunakan tools be
 
 ![Fcrack Zip](fcrackzip.png)
 
-Setelah dilakukan bruteforce, kita mendapatkan passwordnya yaitu `1337h4x0r`. Ternyata di dalam file zip tersebut juga terdapat file pdf yang juga dalam kondisi terprotected oleh password. Maka kita menggunakan tools `pdfcrack` untuk melakukan bruteforce terhadap file pdf tersebut.
+Setelah dilakukan bruteforce, kita mendapatkan passwordnya yaitu `1337h4x0r`. Ternyata di dalam file zip tersebut juga terdapat file [PDF](Challenge/flag.pdf) yang juga dalam kondisi terprotected oleh password. Maka kita menggunakan tools `pdfcrack` untuk melakukan bruteforce terhadap file pdf tersebut.
 
 ![PDF Crack](pdfcrack.png)
 
