@@ -23,7 +23,7 @@ Ketika discan QR Code tersebut, kita langsung mendapatkan flagnya.
 
 ## Note
 - File [secret.csv](./Challenge/secret.csv) merupakan file challenge awal.
-- File [secret_solve.csv](./Challenge/secret.csv) merupakan file challenge yang sudah dilakukan solve.
+- File [secret_solve.xlsx](./Challenge/secret.xlsx) merupakan file challenge yang sudah dilakukan solve.
 
 ## Flag
 ### n00bz{qr_c0d3_1n_4_csv_f1l3_w0w!!!}
