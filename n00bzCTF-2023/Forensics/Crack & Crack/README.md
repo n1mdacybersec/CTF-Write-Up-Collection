@@ -4,7 +4,7 @@
 Just Crack & Crack! Author: NoobMaster
 
 ## Attachment
-[flag.avi](./Challenge/flag.zip)
+[flag.zip](./Challenge/flag.zip)
 
 ## Solusi
 Pada challenge ini terdapat sebuah file zip yang terkunci. Kita gunakan tools bernama `fcrackzip` untuk melakukan bruteforce terhadap file zip tersebut dengan menggunakan wordlist `rockyou.txt`.
