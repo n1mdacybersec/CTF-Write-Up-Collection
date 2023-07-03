@@ -15,4 +15,4 @@ Hasil pencarian google menunjukkan bahwa patung perunggu yang dimaksud adalah `m
 Patung tersebut ditemukan pada koleksi dari [Rubin Museum of Art](https://rubinmuseum.org/collection/artwork/six-armed-mahakala)
 
 ## Flag
-uiuctf{rubin_museum_of_art}
+### uiuctf{rubin_museum_of_art}

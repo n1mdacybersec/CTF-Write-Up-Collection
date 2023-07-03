@@ -16,4 +16,4 @@ Pencarian dilakukan dengan menggunakan kata kunci yang ada, yaitu `Mayor Robert 
 Hasil pencarian adalah sekop pertama yang digunakan untuk menggali subway pertama ada pada [Museum of The City of New York](https://collections.mcny.org/asset-management/2F3XC583Z9IL)
 
 ## Flag
-uiuctf{museum_of_the_city_of_new_york}
+### uiuctf{museum_of_the_city_of_new_york}
