@@ -65,8 +65,8 @@ Kemudian untuk 2 file yang memiliki nama yang sama yaitu `flag201.txt` juga memi
 ```
 mUPPiWo7w9VFtbofzkCQw7OYVmPs48TCYgXBozFxaXBSl6rrnU
 ```
-Panjangnya memang benar 50 byte. Kemudian dicoba untuk mengekstrak file `flag201.txt` yang ukurannya 14 byte dengan sedikit mengubah program sebelumnya namun tidak berhasil.
-Percobaan selanjutnya adalah mengekstrak menggunakan PeaZip, kemungkinan program Python tidak bisa membaca atau mengekstrak file `flag201.txt` berukuran 14 byte karena Python salah membaca atau mengekstrak dari direktori `flag` yang dimodifikasi atau dibuat pada 16 Juli 2023, karena pada saat membuka direktori `flag` yang satu lagi menunjukkan ukuran file `flag201.txt`.
+Kemudian dicoba untuk mengekstrak file `flag201.txt` yang ukurannya 14 byte dengan sedikit mengubah program sebelumnya namun tidak berhasil.
+Percobaan selanjutnya adalah mengekstrak menggunakan PeaZip, kemungkinan program Python tidak bisa membaca atau mengekstrak file `flag201.txt` berukuran 14 byte karena Python salah membaca atau mengekstrak dari direktori `flag` yang dimodifikasi atau dibuat pada 16 Juli 2023, karena pada saat membuka direktori `flag` yang satu lagi menunjukkan ukuran file `flag201.txt` adalh 14 byte.
 Oleh karena itu file `flag201.txt` yang diekstrak berasal dari direktori `flag` yang dibuat atau dimodifikasi pada 1 Januari 1980.
 Setelah diekstrak memang benar terdapat bagian flag yang terakhir pada file `flag201.txt` dengan ukuran 14 byte itu.
 
