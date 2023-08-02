@@ -5,7 +5,7 @@ What's a good challenge without a second part? Anyways make sure to VisIt thE ne
 Author: NoobMaster
 
 ## Solusi
-Pada deskripsi challenge terdapat suatu keanehan terdapat setelah keanehan, yaitu ada huruf kapital pada beberapa kata. Setelah disatukan ternyata membentuk suatu kalimat yaitu `VIEW PREVIOUS RESPONSES`, yang mana hal tersebut berarti kita harus melihat response/jawaban dari google form tersebut. Untuk mencari flag pada challenge ini dengan cara mengganti link `https://docs.google.com/forms/d/e/1FAIpQLSd9-GMq2s_HTEE0Wv3UL2sNo3DSg1UBpyacOmoCZYuEymBAxw/viewform` menjadi `https://docs.google.com/forms/d/e/1FAIpQLSd9-GMq2s_HTEE0Wv3UL2sNo3DSg1UBpyacOmoCZYuEymBAxw/viewanalytics`. Pada link tersebut kita menjadi `viewform` menjadi `viewanalytics` yang mana kita langsung melihat response daripada google form tersebut. Ternyata kita mendapatkan flagnya.
+Pada deskripsi challenge terdapat suatu keanehan, yaitu ada huruf kapital pada beberapa kata. Setelah disatukan ternyata membentuk suatu kalimat yaitu `VIEW PREVIOUS RESPONSES`, yang mana hal tersebut berarti kita harus melihat response/jawaban dari google form tersebut. Untuk mencari flag pada challenge ini dengan cara mengganti link `https://docs.google.com/forms/d/e/1FAIpQLSd9-GMq2s_HTEE0Wv3UL2sNo3DSg1UBpyacOmoCZYuEymBAxw/viewform` menjadi `https://docs.google.com/forms/d/e/1FAIpQLSd9-GMq2s_HTEE0Wv3UL2sNo3DSg1UBpyacOmoCZYuEymBAxw/viewanalytics`. Pada link tersebut kita menjadi `viewform` menjadi `viewanalytics` yang mana kita langsung melihat response daripada google form tersebut. Ternyata kita mendapatkan flagnya.
 
 ![Flag](flag.png)
 
