@@ -27,7 +27,7 @@ Namun saat URL tersebut dibuka kita harus memasukkan password untuk mengetahui i
 Kemudian dilakukan pengecekan pada file `formhistory.sqlite` yang merupakan history dari form data, dimana mungkin user memasukkan password dengan cara mengetik pada form password URL tersebut, namun tidak menunjukkan adanya history dari form data.
 Ada satu file lagi yang bisa dicek, yaitu file `logins.json` yang merupakan entri dari saved password yang ada pada browser Firefox. File tersebut berisi username dan password yang sudah terenkripsi dan untungnya pada profile browser tersebut terdapat file `key4.db` yang bisa digunakan untuk mendekripsi username dan password yang tersimpan pada file `logins.json`.
 
-Untuk mendapatkan saved password dari `logins.json` digunakan link [berikut](hhttps://support.mozilla.org/en-US/kb/recovering-important-data-from-an-old-profile#).
+Untuk mendapatkan saved password dari `logins.json` digunakan link [berikut](https://support.mozilla.org/en-US/kb/recovering-important-data-from-an-old-profile#).
 Untuk menghindari kehilangan data pada profile Firefox yang sudah ada, maka dibuat profile baru terlebih dahulu.
 Setelah selesai membuat profile baru, tutup Firefox. Copy paste file `logins.json` dan `key4.db` ke folder profile yang sudah dibuat sebelumnya.
 Untuk membuka Firefox dengan profile baru yang sudah dibuat, jalankan command berikut pada terminal dan pilih user profile yang baru dibuat.
