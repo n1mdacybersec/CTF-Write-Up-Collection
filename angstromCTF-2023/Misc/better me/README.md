@@ -7,7 +7,7 @@ With the power of ARTIFICIAL INTELLIGENCE, I can replace myself!! Ask your quest
 100
 
 ## Solusi
-Challenge ini merupakan sebuah chatbot yang menggunakan LLM (Large Language Model) seperti chatGPT.Untuk menyelesaikan challenge ini, diambil sebuah inspirasi dari video [YouTube] berikut tentang bagaimana chatGPT bisa dibuat menjadi sebuah terminal Linux yang dijalankan pada remote machine.
+Challenge ini merupakan sebuah chatbot yang menggunakan LLM (Large Language Model) seperti chatGPT.Untuk menyelesaikan challenge ini, diambil sebuah inspirasi dari video [YouTube](https://www.youtube.com/watch?v=0A8ljAkdFtg) berikut tentang bagaimana chatGPT bisa dibuat menjadi sebuah terminal Linux yang dijalankan pada remote machine.
 
 Prompt yang digunakan di challenge ini untuk bisa membuat model menjadi terminal adalah seperti ini.
 ```
