@@ -6,6 +6,9 @@ Platform: ImaginaryCTF 2023
 
 > It seems that emoji "crypto" challenges are all the rage nowadays... Well, here's another one for you!
 
+## Attachment
+[gen.py](./Challenge/) [out.txt](./Challenge/out.txt)
+
 Two files were attached:
 
 `gen.py`:
