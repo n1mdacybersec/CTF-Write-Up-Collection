@@ -16,8 +16,8 @@ Beberapa write-up mungkin tidak sempurna dan masih memerlukan perbaikan, jika an
 Terima kasih telah mengunjungi repository ini. Semoga bisa bermanfaat dan menjadi sumber belajar yang baik untuk anda.
 
 ## Contributor
-<a href="https://github.com/arasydafa/CTF-Write-Up-Collection/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=arasydafa/CTF-Write-Up-Collection" />
+<a href="https://github.com/N1MDA-Cyber-Security/CTF-Write-Up-Collection/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=n1mdacybersec/CTF-Write-Up-Collection" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
