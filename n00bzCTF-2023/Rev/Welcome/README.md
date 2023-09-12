@@ -10,6 +10,7 @@ Author: Heith
 
 ## Solusi
 Pada challenge ini diberikan suatu file binary. Hal yang pertama kita lakukan adalah mengecek menggunakan command `strings` apakah terdapat flag yang terhardcoded ke dalam binary tersebut. Ketika dilakukan pengecekan ternyata flagnya sudah terdapat di binary tersebut.
+
 ![Flag](flag.png)
 
 ## Flag
