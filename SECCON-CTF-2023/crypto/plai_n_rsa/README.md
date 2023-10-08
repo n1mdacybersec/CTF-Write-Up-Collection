@@ -55,9 +55,10 @@ hint = 2752832215497380463459181688466418113133806189982213521403505704327143072
 # https://crypto.stackexchange.com/questions/5791/why-is-it-important-that-phin-is-kept-a-secret-in-rsa
 
 for k in range(1, e):
-    canditate_phi = (d*e - 1) // k
     if (d*e - 1) % k != 0:
         continue
+    canditate_phi = (d*e - 1) // k
+
     # phi(n) = (p-1)(q-1) = pq - (p+q) + 1 = (n+1) - (p+q)
     n = canditate_phi + hint - 1
     m = long_to_bytes(pow(c,d,n))
