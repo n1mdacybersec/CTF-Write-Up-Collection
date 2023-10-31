@@ -27,7 +27,7 @@ Again just add recipe in CyberChef to decode base64.
 ![Decode base64 message](./4.png)
 
 The result from decoding base64 message looks like a base64, but this is not a base64 encoded message.
-Actually this is a [base62](https://en.wikipedia.org/wiki/Base62) encoded message, the difference between base62 and base64 is in base64 there's no `+/` characters.
+Actually this is a [base62](https://en.wikipedia.org/wiki/Base62) encoded message, the difference between base62 and base62 is in base64 there's no `+/` characters.
 
 ![Decode base62 message](./5.png)
 
