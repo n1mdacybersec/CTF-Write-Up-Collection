@@ -117,7 +117,7 @@ Let's take a look in this example for more clear explaination.
 
 ![Unexpected behavior of parseInt()](./3.png)
 
-As you can see from the example, any string that starts with 1 will be converted to 1 by using `parseInt()` even though the input isn't exactly the same.
+As you can see from the example, any string that starts with 1 will be converted to 1 by using `parseInt()` even though the input isn't exactly the same. This is another example of the difference between `parseInt()` and `Number()` to change string to number [stackoverflow](https://stackoverflow.com/questions/67998993/why-does-number-parseint111aaa-works-like-its-supposed-to-in-js-what-is-th).
 
 By leveraging this unexpected behavior we can attempt to authenticate by modifying the value of the `issue` variable. In this example I'm using this value to read the content of article number 10.
 
