@@ -33,7 +33,7 @@ To start tracking commits and branches, we can type:
 git init
 ```
 
-After initializing the directory, we can use check the log of commits.
+After initializing the directory, we can use `git log` to check the log of commits.
 
 ```sh
 git log
