@@ -41,7 +41,7 @@ Using the POST method it will return an error like this.
 We can't use GET or POST method for this website, but what is the other available HTTP request method for this website?
 Well, the answer is from the description of this challenge: `what options do i have?`.
 It tells us about what available options for this website. 
-HTTP request method have an OPTIONS method for requesting the permitted request method for website or URL.
+HTTP request method have an [OPTIONS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS) method for requesting the permitted request method for website or URL.
 
 ```sh
 curl -X OPTIONS http://denied.amt.rs/
