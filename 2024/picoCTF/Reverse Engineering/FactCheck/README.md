@@ -267,21 +267,21 @@ This is the Python code to displaying the flag.
 
 ```py
 v22 = 'picoCTF{wELF_d0N3_mate_'
-v23 = '7'
+v23 = '5'
 v24 = '5'
-v25 = '4'
+v25 = '7'
 v26 = '3'
-v27 = '6'
-v28 = '9'
+v27 = '0'
+v28 = '5'
 v29 = 'a'
 v30 = 'e'
-v31 = '3'
+v31 = 'f'
 v32 = 'd'
 v33 = 'b'
-v34 = '1'
+v34 = '9'
 v35 = '6'
-v36 = 'e'
-v37 = 'c'
+v36 = 'd'
+v37 = '7'
 v38 = '8'
 
 if(ord(v24) <= 65):
@@ -312,4 +312,4 @@ print(v22)
 ```
 
 ## Flag
-`picoCTF{wELF_d0N3_mate_1c496e73}`
+`picoCTF{wELF_d0N3_mate_97750d5f}`
