@@ -1,17 +1,23 @@
 # Flag Checker
 
-## Deskripsi
+## Description
 Periksa apakah flag mu benar atau tidak!
 
-## Solusi
-Challenge yang diberikan memberikan sebuah file executable untuk Windows. Langkah pertama yang dilakukan adalah mengecek strings dari file tersebut.
-``` shell
+If the description is translated to English.
+> Check if your flag is correct or not!
+
+## Attachment
+[FlagChecker.exe](./Challenge/FlagChecker.exe)
+
+## Solution
+The challenge provides us with an executable file for Windows. The first step to take is to check the strings of the file.
+```shell
 strings FlagChecker.exe
 ```
-Tidak ada hasil yang begitu bisa digali informasinya
+There is no information that could be extracted from this result that might lead us to find the flag.
 
-Langkah berikutnya adalah mencoba perintah objdump untuk menampilkan semua konten dari file executable beserta isinya pada masing-masing memory.
-``` shell
+The next step is to try the `objdump` command to display all the contents of the executable file and its contents in each memory.
+```shell
 $ objdump -s FlagChecker.exe
 -- output truncated --
  402fe0 65787400 7365745f 54657874 00666c61  ext.set_Text.fla
@@ -36,7 +42,8 @@ $ objdump -s FlagChecker.exe
  403110 79002000 41006700 61006900 6e002000  y. .A.g.a.i.n. .
 -- output truncated --
 ```
-Terlihat terdapat string berupa flag yang ditulis secara hardcoded di file executable tersebut.
+
+It can be seen that there is a string in the form of a flag written hardcoded in the executable file.
 
 ## Flag
-### KMIPN4{h4rdc0d3d_v4lu3_1s_3z_t0_r34d}
+`KMIPN4{h4rdc0d3d_v4lu3_1s_3z_t0_r34d}`
