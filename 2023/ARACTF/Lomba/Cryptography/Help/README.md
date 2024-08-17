@@ -1,22 +1,22 @@
 # Help
 
-## Deskripsi
+## Description
 Bob is receiving a message from their clients, to put this text on the display in the office. Bob is confused because he didn't know what it is, can you help him?
 
 Format: ARA2023{lowercase_flag}
 
 [Attachment](./Challenge/help.txt)
 
-## Solusi
-Diberikan file teks yang isinya seperti bilangan biner, namun jika dihitung kembali hanya terdapat 7 bit. Ternyata bilangan 0 dan 1 tersebut merepresentasikan 7-segment display (terlihat dari deskripsi soal yang menyebutkan display). Untuk mendecode pesan tersebut digunakan [dCode](https://www.dcode.fr/7-segment-display), namun didapatkan hasil seperti di bawah ini.
+## Solution
+We got a text file that is likely written in binary format, but if we count it there are only 7 bit instead of 8 bit. It turns out that the number of 0 and 1 is representing a 7-segment display (assuming from the description of this challenge that mentioned display). To decode this message we use this [dCode](https://www.dcode.fr/7-segment-display), but the result is like this.
 
 ![Not readable 7-segment display](./1.png)
 
-Terlihat bahwa karakter yang ditampilkan menggunakan 7-segment display terbalik. Untuk itu isi dari file `help.txt` direverse dan di decode kembali.
+If we looked at it, the characters that show the 7-segment display is reversed. In this case, we need to reverse the `help.txt` and try to decode it again.
 
 ![Final result](./result.png)
 
-Sudah terlihat huruf yang ditampilkan pada 7-segment display, yaitu supertranscendentess_it_is_hehe. Sehingga flagnya menjadi ARA2023{supertranscendentess_it_is_hehe}.
+After decoding, we got a text supertranscendentess_it_is_hehe. So the flag is ARA2023{supertranscendentess_it_is_hehe}
 
 ## Flag
-### ARA2023{supertranscendentess_it_is_hehe}
+`ARA2023{supertranscendentess_it_is_hehe}`
