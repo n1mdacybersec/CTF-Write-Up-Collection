@@ -1,14 +1,14 @@
 # L0v32x0r
 
-## Deskripsi
+## Description
 Vonny and Zee were having a treasure hunt game until they realized that one of the clues was a not alike the other clues as it has a random text written on the clue.
 
 The clue was "001300737173723a70321e3971331e352975351e247574387e3c".
 
 Help them to find what the hidden clue means!
 
-## Solusi
-Clue yang diberikan berupa karakter hex yang kemungkinan sudah di xor dengan ukuran 1 byte. Seperti yang kita tahu bahwa 1 hex bernilai 4 bit, sehingga 2 hex akan bernilai 8 bit atau 1 byte. Jika dilihat clue yang diberikan memiliki panjang 52 bit, itu artinya jika kita bagi panjangnya dengan 2 akan ada 26 karakter dengan panjang 2 bit. Solusi dari permasalahan ini adalah dengan program Python berikut.
+## Solution
+The `clue` is a hex character that has probably been XOR with a size of 1 byte. As we know that 1 hex character is worth 4 bits, so 2 hex characters will be worth 8 bits or 1 byte. If you look at the `clue`, it has a length of 52 bits, that means if we divide the length by 2 there will be 26 characters with a length of 2 bits. The solution to this problem is in this Python program.
 
 ```python
 def xor(hex_a, hex_b):
@@ -33,8 +33,8 @@ if __name__ == '__main__':
 	main()
 ```
 
-### Solusi Alternatif
-Selain dengan menggunakan program Python di atas, dapat juga digunakan program Python berikut ini untuk melakukan bruteforce flag terhadap 1 byte XOR.
+### Alternate
+In addition to using the Python program above, you can also use the following Python program to bruteforce the flag against 1 byte XOR.
 
 ``` python
 cipher = '001300737173723a70321e3971331e352975351e247574387e3c'
@@ -49,4 +49,4 @@ for i in range(0x00,0xff):
 ```
 
 ## Flag
-### ARA2023{1s_x0r_th4t_e45y?}
+`ARA2023{1s_x0r_th4t_e45y?}`
