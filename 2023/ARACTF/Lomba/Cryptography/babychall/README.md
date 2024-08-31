@@ -1,6 +1,6 @@
 # babychall
 
-## Deskripsi
+## Description
 
 Welcome to ARACTF! To start the CTF, please translate this flag that I get from display banner! [Good Morning](https://www.youtube.com/watch?v=SBrXvqRfb5M)
 
@@ -8,9 +8,9 @@ Format : ARA2023{lowercase_flag}
 
 [Attachment](./Challenge/pairs_of_numbers.txt)
 
-## Solusi
+## Solution
 
-Permasalahan yang diberikan adalah soal RSA, namun disini nilai n dan c lebih dari satu, yaitu n1, n2, dan n3 serta c1, c2, c3. Dari soal tersebut tidak diketahui nilai e. Dari permasalahan tersebut bisa digunakan Chinese Remainder Theorem (CRT). Dimana kita bisa mengetahui hasil sisa pembagian dari n, dengan syarat pembagi adalah bilangan koprime. Berdasarkan [Wikipedia](https://en.wikipedia.org/wiki/Chinese_remainder_theorem) dan link [berikut](https://asecuritysite.com/rsa/rsa_ctf02), dibuat program Python di bawah untuk menyelesaikan permasalahan.
+The given problem is an RSA problem, but here the values ​​of `n` and `c` are more than one, namely `n1`, `n2`, and `n3` as well as `c1`, `c2`, `c3`. From this problem, the value of e is unknown. From this problem, the Chinese Remainder Theorem (CRT) can be used. Where we can find out the remainder of the division of n, provided that the divisor is a coprime number. Based on [Wikipedia](https://en.wikipedia.org/wiki/Chinese_remainder_theorem) and this [site](https://asecuritysite.com/rsa/rsa_ctf02), we can create a Python program to solve this challenge.
 
 ```python
 from Crypto.Util.number import bytes_to_long, long_to_bytes
@@ -38,4 +38,4 @@ print(long_to_bytes(val))
 ```
 
 ## Flag
-### ARA2023{s00000_much_c1ph3r_but_5m4ll_e_5t1ll_d0_th3_j0b}
+`ARA2023{s00000_much_c1ph3r_but_5m4ll_e_5t1ll_d0_th3_j0b}`
