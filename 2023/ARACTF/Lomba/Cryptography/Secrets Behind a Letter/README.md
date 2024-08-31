@@ -1,13 +1,13 @@
 # Secrets Behind a Letter
 
-## Deskripsi
+## Description
 Melon and Edith went to an labyrinth and they should break the code written on a letter in a box in order to escape the labyrinth.
 Open the letter and break the code
 
 [Attachment](./Challenge/Letter.txt)
 
-## Solusi
-Dari attachment yang diberikan terdapat nilai p, q, c, dan e. Dari nilai tersebut bisa ditebak challenge berupa [RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem)). Solusi dari permasalahan tersebut dapat dipecahkan dengan program Python berikut.
+## Solution
+From the attachment file, we know variables that are called `p`, `q`, `c`, and `e`. From this variables it might referred to [RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem)). The solution of this challenge is by executing this Python program.
 
 ```python
 from Crypto.Util.number import long_to_bytes, inverse
@@ -27,4 +27,4 @@ print(long_to_bytes(m))
 ```
 
 ## Flag
-### ARA2023{1t_turn5_0ut_to_b3_an_rsa}
+`ARA2023{1t_turn5_0ut_to_b3_an_rsa}`
