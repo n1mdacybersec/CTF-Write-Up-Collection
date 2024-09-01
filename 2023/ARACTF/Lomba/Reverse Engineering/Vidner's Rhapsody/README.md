@@ -1,18 +1,16 @@
 # Vidner's Rhapsody
 
-## Deskripsi
+## Description
 Once I was going to send you the program, but do me a favor by retrieving the real output of the program from this generated JSON program tree. Can you?
 
 [Attachments](./Challenge/mytscode.json)
 
-## Solusi
-Soal yang diberikan berupa file JSON yang jika dilihat seperti struktur program. Jadi file JSON tersebut merupakan AST (Abstract Syntax Tree) yang merupakan penulisan struktur dari program asli dalam bentuk tree.
+## Solution
+This time we got a JSON file that looks like a structure of a program. So the JSON file is an AST (Abstract Syntax Tree) which is a writing of the structure of the original program in tree form.
 
 ![AST for program](./1.png)
 
-Karena malas untuk melakukan representasi dari JSON tersebut ke program secara manual, maka dicari cara lain untuk membuat AST tersebut menjadi source code program secara lebih cepat dan efisien. Ditemukan cara yang lebih cepat yaitu dengan menggunakan [escodegen](https://github.com/estools/escodegen/tree/master). Dengan menggunakan escodegen tersebut AST akan otomatis ditranslate menjadi Javascript source code.
-
-Cara menggunakannya cukup mudah, seperti pada program di bawah ini
+Honestly, I'm too lazy to write the code for this AST to become a program manually. So, I tried to search to make this AST become a code of a program that are faster and automatically. Finally, I found [escodegen](https://github.com/estools/escodegen/tree/master), with this we can convert or translate the AST into Javascript code automatically. You can check the Javascript program below to use escodegen.
 
 ```js
 const fs = require('fs')
@@ -23,7 +21,8 @@ let parser = JSON.parse(file)
 console.log(escodegen.generate(parser));
 ```
 
-Saat menjalankan program tersebut akan didapatkan source codenya.
+By executing the above program, we'll get this Javascript program.
+
 ```js
 function mystenc(berserk, guts) {
     var s = [], j = 0, x, res = '';
@@ -81,9 +80,9 @@ var strenk = [
 mystenc(berserk, strenk);
 ```
 
-Source code tersebut disimpan sebagai file .js dan ketika dijalankan akan didapatkan hasil seperti berikut.
+Now we just need to save the code of this Javascript program into .js file and run it.
 
 ![Result from running the code](./2.png)
 
 ## Flag
-### ARA2023{j4vAST_l!ke_84831_t0wer_lol}
+`ARA2023{j4vAST_l!ke_84831_t0wer_lol}`
