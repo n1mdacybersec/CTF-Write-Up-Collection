@@ -1,0 +1,12 @@
+The flag is divided into 5 parts :
+1. Social media ID 
+2. The name of university she studied at
+just the abbreviation is enough, for example Institut Teknologi Sepuluh Nopember become ITS
+3. The mascot name
+4. The time when she uploaded photos in the bookstore
+5. The comment in her photo with Sakura
+
+Format as below :
+ARA2023{SocialMediaID_UniversityName_MascotName_DateMonthYear-Hour:Minute_RedactedFlag}
+Example :
+ARA2023{46152324397_UTL_Felda_7Mei2017-13:02_r3d4cTED}
