@@ -1,13 +1,14 @@
 # Backroom
 
-## Deskripsi
+## Description
 
 I found a place that give me a backroom vibes. I think I like this place, so I give this place 5 star. Can you find this place?
 
 [Attachment](./Challenge/IMG20221221153220.jpg)
 
-## Solusi
-Diberikan sebuah file gambar. Jika digunakan perintah exiftool terdapat koordinat latitude longitude yang bisa dicari menggunakan Google maps.
+## Solution
+We are given a picture for this challenge. If we use `exiftool` command, you'll found the GPS coordinate from this picture. This coordinate can be use to search the location on Google maps.
+
 ```
 $ exiftool IMG20221221153220.jpg
 -- output truncated --
@@ -27,9 +28,9 @@ Hyperfocal Distance             : 2.39 m
 Light Value                     : 3.8
 ```
 
-Penelusuran menggunakan Google maps mendapatkan alamat lantai dasar blok b no 1 hi tech mall jl kusuma bangsa tambaksari kec tambaksari kota sby jawa timur 60136. Kami mencoba untuk mencari pada ulasan HiTech Mall Surabaya. Didapatkan flag dari review user Azril dan foto yang dikirimkan dalam review tersebut sama dengan foto yang ada di soal.
+The search result using Google maps will give us the address of Hi-Tech Mall of the ground floor block B number 1. The complete address is Kusuma Bangsa street at Surabaya. When we looking for the reviews for this place on Google maps, we got the flag from the account name Azril and the photo that he sent in his review is similar with the picture for the assignment of this challenge.
 
 ![Flag in user review](./flag.png)
 
 ## Flag
-### ARA2023{c4r3full_w1th_y0uR_m3tad4ta}
+`ARA2023{c4r3full_w1th_y0uR_m3tad4ta}`
