@@ -1,33 +1,33 @@
 # Painfully Deep Flag
 
-## Deskripsi
+## Description
 This one is a bit deep in the stack.
 
 ## Attachment
 [flag.pdf](./Challenge/flag.pdf)
 
-## Solusi
-Pada challenge ini diberikan sebuah file pdf. Pada PDF forensic biasanya kita akan mencari tahu mengenai struktur dari PDF itu sendiri, dimana kita bisa menemukan informasi tambahan seperti kemungkinan adanya embedded object atau gambar yang secara kasat mata tidak terlihat. Link [berikut ini](https://resources.infosecinstitute.com/topics/hacking/pdf-file-format-basic-structure/) memberikan informasi mengenai struktur PDF.
+## Solution
+In this challenge I need to analyze a PDF file. When analyzing PDF in forensic challenge, I usually will look at the structure of the PDF file, because sometimes I found additional information such as the possibility of embedded objects or images that are not visible to the naked eye. For this challenge I use this [reference](https://resources.infosecinstitute.com/topics/hacking/pdf-file-format-basic-structure/) about the structure of PDF.
 
-Langkah pertama adalah dengan menggunakan command `strings` untuk melihat struktur dari flag.pdf
+The first step to analyzing the structure of `flag.pdf` using `strings` command.
 
 ```
 strings flag.pdf
 ```
 
-Pada gambar di bawah ini menunjukkan terdapat beberapa gambar yang ada pada file pdf tersebut, namun yang dapat kita lihat hanya satu.
+In this image below, the result of `strings` command shows us there are more than one images in this pdf, but we can only saw clearly one image.
 
 ![Multiple images inside PDF](./1.png)
 
-Untuk mengekstrak seluruh gambar yang di dalam pdf, bisa menggunakan command `pdfimages`.
+To extract these images, we can use `pdfimages` command.
 
 ```
 pdfimages flag.pdf extract/
 ```
 
-Command tersebut akan mengekstrak seluruh gambar yang ada pada flag.pdf dan hasil ekstraknya akan diletakkan pada direktori extract. Untuk hasil gambar yang diekstrak masih berupa format .ppm, perlu diubah lagi menjadi format .png atau .jpeg, karena beberapa aplikasi gallery tidak bisa membuka file .ppm.
+The above command will extract all images in `flag.pdf` and the result will be saved on extract directory. The extracted images from that command is still in .ppm format, we need to convert these images to PNG or JPEG to open it using photo viewer apps.
 
 ![Flag](./flag.png)
 
 ## Flag
-### amateursCTF{0ut_0f_b0unds}
+`amateursCTF{0ut_0f_b0unds}`
