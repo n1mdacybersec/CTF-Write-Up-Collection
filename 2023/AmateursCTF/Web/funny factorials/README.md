@@ -55,7 +55,7 @@ From the snippet of the source code, we know that the `filter_path` method or fu
 Then, for the `/` route there's an `index` function that called `filter_path` when the user choose the theme for the website. By default the value of this theme is `theme=themes/theme1.css`. Because this value can be controlled by the user it might be the vulnerability for this chalenge.
 
 For retrieving the flag, we can bypass the `filter_path` function. As I said earlier, this function will remove `../` or `/` from the input.
-For example, if we enter `theme=/` as an input the result will be like this `theme=`. But, it doesn't mean that we cannot read the flag that are located in `/flag.txt`. If we enter something like `//` it will removed by the function, because it doesn't satisfy any conditions in the `filter_path` function.
+For example, if we enter `theme=/` as an input the result will be like this `theme=`. But, it doesn't mean that we cannot read the flag that are located in `/flag.txt`. If we enter something like `//` it will not be removed by the function, because it doesn't satisfy any conditions in the `filter_path` function.
 To get the flag, enter this URL:
 
 ```
