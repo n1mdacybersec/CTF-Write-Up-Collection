@@ -1,23 +1,22 @@
 # Archived
 
-## Deskripsi
+## Description
 This challenge has been archived.
 
-## Solusi
-Untuk challenge ini dilakukan pencarian pada Google dengan keyword `amateursCTF archive`.
-Dari hasil pencarian ditemukan hasil pada website [archive.org](https://archive.org/details/opensource?tab=collection&sort=-date&and%5B%5D=mediatype%3A%22%22texts%22+AND+%28Team%29%22) seperti berikut ini.
+## Solution
+For this challenge, I try to search on Google with the keyword `amateursCTF archive`. From this result, there's an archive of the amateursCTF on [archive.org](https://archive.org/details/opensource?tab=collection&sort=-date&and%5B%5D=mediatype%3A%22%22texts%22+AND+%28Team%29%22).
 
 ![Search result from Google](./1.png)
 
-Dari website tersebut dilakukan pencarian dengan menggunakan keyword `amateursCTF`. Hasil pencarian menunjukkan adanya satu hasil dari keyword tersebut.
+On this website, I search using `amateursCTF` as the keyword. I found one result from this search.
 
 ![Search result from archive.org](./2.png)
 
-Di dalamnya terdapat file yang bisa didownload, disini dipilih file 7z.
+If you open the search result, in there you'll find the download options of this archive. I choose 7z in this case.
 
 ![Downloadable files](./3.png)
 
-Di dalam file tersebut, terdapat 3 file di dalamnya, `challenge.yml`, `flag.txt`, dan `solve.txt`. Flag ada pada file `challenge.yml` dan `flag.txt`.
+After downloading the file, there are 3 files inside the 7z archive. These files are `challenge.yml`, `flag.txt`, and `solve.txt`. You can found the flag for this challenge on `challenge.yml` and `flag.txt`.
 
 ## Flag
-### amateursCTF{arch1v3d_r1ght_b3f0r3_th3_start}
+`amateursCTF{arch1v3d_r1ght_b3f0r3_th3_start}`
