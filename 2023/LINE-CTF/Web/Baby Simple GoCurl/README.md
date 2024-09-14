@@ -1,14 +1,18 @@
 # Baby Simple GoCurl
 
-## Deskripsi
+## Description
 Read the `/flag`
 
-## Solusi
-Pada challenge ini diberikan source code yang bisa dicoba di local. Tampilan dari website seperti ini.
+## Attachment
+[baby-simple-gocurl_3e562770d3be9c9d047169c7b235281b.tar.gz](https://github.com/n1mdacybersec/CTF-Write-Up-Collection/blob/main/2023/LINE-CTF/Web/Baby%20Simple%20GoCurl/Challenge/baby-simple-gocurl_3e562770d3be9c9d047169c7b235281b.tar.gz)
+
+## Solution
+In this challenge, there's a source code of this challenge and we can try this challenge on our local machine. The appearance of this website is like this.
 
 ![Challenge page](./1.png)
 
-Disini jika melihat pada file `main.go` terdapat object yang menunjukkan method `HTTP GET` untuk page `/curl`. 
+Here, if you look at the `main.go` file there's an object that shows the `HTTP GET` request method for `/curl` page.
+
 ```go
 r.GET("/curl/", func(c *gin.Context) {
 		client := &http.Client{
@@ -59,13 +63,15 @@ r.GET("/curl/", func(c *gin.Context) {
 		})
 	})
 ```
-Sekilas yang dapat diamati dari potongan source code di atas adalah:
-- Untuk mengakses path `/flag` harus memiliki IP address `127.0.0.1`.
-- Jika IP address bukan `127.0.0.1` dan request yang diberikan mengandung `flag`, `curl`, atau `%` akan muncul error.
-- Hanya memasukkan `url=http://127.0.0.1:8080/flag` pada request tidak akan memberikan flag yang dicari, karena pada program menggunakan `ClientIP()` yang mengecek IP address real dari remote machine yang mengakses web. Referensinya ada pada link [berikut](https://pkg.go.dev/github.com/gin-gonic/gin#Context.ClientIP)
-- Parameter `header_key` dan `header_value` harus kosong.
 
-Selanjutnya pada potongan source code berikut ini, yaitu potongan source code yang menangani request untuk `/flag` menunjukkan untuk mengaksesnya IP address harus `127.0.0.1`
+At a glance, what can be observed from the source code snippet above are:
+- To access the `/flag` path your IP address must `127.0.0.1`.
+- If our IP address is not `127.0.0.1` and our request contains `flag`, `curl`, or `%` the web application will shows an error.
+- Send request by entering `url=http://127.0.0.1:8080/flag` will not give us a flag, because in the source code of the program use a `ClientIP()` function that will check our real IP address from the remote machine that accessed the web application. You can find the reference at this [link](https://pkg.go.dev/github.com/gin-gonic/gin#Context.ClientIP)
+- The URL parameters of `header_key` and `header_value` must be empty
+
+Now, let's take a look at this snippet of code. This code is handling the request to `/flag` path and it shows that the IP address is must to be `127.0.0.1` to accessed it.
+
 ```go
 r.GET("/flag/", func(c *gin.Context) {
 		reqIP := strings.Split(c.Request.RemoteAddr, ":")[0]
@@ -84,16 +90,19 @@ r.GET("/flag/", func(c *gin.Context) {
 	})
 ```
 
-Berdasarkan kedua potongan source code tadi, untuk mendapatkan flag maka IP address dari device yang kita gunakan harus `127.0.0.1`.
-Untuk itu bisa menggunakan HTTP header `X-Forwarded-For: 127.0.0.1` untuk menunjukkan IP address adalah `127.0.0.1` ketika mengakses web server. Penjelasan lengkapnya ada pada link [berikut](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For).
+Based on the two previous of code, to obtain the flag, the IP address of our machine is must be set to `127.0.0.1`. For this challenge we can use `X-Forwarded-For: 127.0.0.1` HTTP header to tell the web server that we're accessing the server using IP address `127.0.0.1`. `X-Forwarded-For` is a HTTP header request to tell the web server about our originating IP address. This header is being used to tell the web server about the originating or real IP address when a client accessing the web server through a proxy server. The full explanation is in this [link](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Forwarded-For)
 
-Penyelesaiannya adalah dengan membuat request `HTTP GET` dengan nilainya adalah `/curl/?url=http:127.0.0.1:8080/flag&header_key=&header_value="` disertai header `X-Forwaded-For:127.0.0.1`.
-Port `8080` adalah port dari web tersebut jika kita menjalankannya pada local.
-Contohnya seperti berikut ini.
+To solve this challenge is by sending a request of `HTTP GET` method with the following URL parameters and header.
+
+```
+GET /curl/?url=http:127.0.0.1:8080/flag&header_key=&header_value=" HTTP/1.1
+Host: 34.146.230.233:11000
+X-Forwaded-For: 127.0.0.1
+```
 
 ![Request using X-Forwarded-For:127.0.0.1 header](./flag.png)
 
 ## Flag
-### LINECTF{6a22ff56112a69f9ba1bfb4e20da5587}
+`LINECTF{6a22ff56112a69f9ba1bfb4e20da5587}`
 
 
