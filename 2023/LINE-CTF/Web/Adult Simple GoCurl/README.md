@@ -1,23 +1,26 @@
 # Adult Simple GoCurl
 
-## Deskripsi
+## Description
 Read the flag (/flag)
 
-## Solusi
-Challenge yang mirip dengan Baby Simple GoCurl, namun terdapat perbedaan cara dari program untuk melakukan pengecekan pada method GET untuk `/curl`.
+## Attachment
+[adult-simple-gocurl_9fd03c47bfa6bb6d4687720836633c3d.tar.gz](https://github.com/n1mdacybersec/CTF-Write-Up-Collection/blob/main/2023/LINE-CTF/Web/Adult%20Simple%20GoCurl/Challenge/adult-simple-gocurl_9fd03c47bfa6bb6d4687720836633c3d.tar.gz)
+
+## Solution
+The source code of this challenge is pretty similar with [Baby Simple GoCurl](../Baby%20Simple%20GoCurl/README.md), but there's a difference of how the program check the GET method request for `/curl` path.
 
 ```go
 if strings.Contains(reqUrl, "flag") || strings.Contains(reqUrl, "curl") || strings.Contains(reqUrl, "%") {
-			c.JSON(http.StatusBadRequest, gin.H{"message": "Something wrong"})
-			return
-		}
+	c.JSON(http.StatusBadRequest, gin.H{"message": "Something wrong"})
+		return
+}
 ```
 
-Dari potongan source code di atas, maka request ke server akan dicek apakah mengandung `flag`, `curl`, atau `%`. Karena pada program ini tidak ada pengecekan untuk IP address yang melakukan request adalah `127.0.0.1` maka request untuk IP address `http://127.0.0.1:8080/` masih bisa untuk langsung dimasukkan pada parameter `url`.
+From the snippet of code, the request to the server will be checked if its contains `flag`, `curl` or `%`. But, in this program there's no condition to check the originating IP address must be `127.0.0.1`, so we can insert `http://127.0.0.1:8080/` directly to `url` parameter on `/curl` path.
 
-Untuk mendapatkan flag, dapat memanfaatkan header `X-Forwarded-Prefix` yang mana pada link [berikut](https://github.com/gin-gonic/gin/pull/3500) menunjukkan bahwa request menggunakan header tersebut ketika dimodifikasi sedemikian rupa akan memungkinkan untuk membuat unintended request yang bisa dieksploitasi. 
+To obtain the flag, I used `X-Forwarded-Prefix` header that can be modified to make the unintented request to exploit the server. I found about this from this [link](https://github.com/gin-gonic/gin/pull/3500).
+Because the flag on this challenge are on `/flag` path that can only be accessed by the localhost, but by using the feature of `X-Forwarded-Prefix` header will change the redirect of the request and make its possible to us to see the content of `/flag`. The request that need to be sent to the server to obtain the flag is like this.
 
-Karena flag berada pada `/flag` yang hanya bisa diakses oleh localhost, maka dengan memanfaatkan fitur `X-Forwarded-Prefix` akan mengubah redirect yang seharusnya kita tidak bisa melihat isi dari `/flag` akan membuat kita dapat melihat isi flag. Request yang digunakan seperti berikut ini.
 
 ```
 GET http://34.84.87.77:11001/curl/?url=http://127.0.0.1:8080//&header_key=X-Forwarded-Prefix&header_value=/flag
@@ -26,4 +29,4 @@ GET http://34.84.87.77:11001/curl/?url=http://127.0.0.1:8080//&header_key=X-Forw
 ![Request using crafted X-Forwarded Prefix](./solved.png)
 
 ## Flag
-### LINECTF{b80233bef0ecfa0741f0d91269e203d4}
+`LINECTF{b80233bef0ecfa0741f0d91269e203d4}`
